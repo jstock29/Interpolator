@@ -1,6 +1,6 @@
 .portfolio-header {
   position: relative;
-  background-image: url(images/header-bg.jpg);
+  background-image: url(images/header-bg.png);
 }
 
 .portfolio-header .mdl-layout__header-row {
@@ -29,7 +29,6 @@
 }
 
 .portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -164,7 +163,32 @@ img.article-image {
 }
 
 footer {
-  background-image: url(images/footer-background.png);
-  background-size: cover;
+  /*background-image: url(images/footer-background.png);*/
+   background-size: cover;
+   background-color: #f0f0f0;
 }
 
+.content-grid {
+  max-width: 960px;
+  /* border:0px; */
+}
+#main_title{
+  color:  #eeeeee;
+}
+.mdl-layout__header-row .mdl-navigation__link{
+  color:#eeeeee;
+}
+#chartcard,#inputcard{
+      width: calc(50% - 16px);
+}
+
+.mdl-cell {
+  margin:0px
+}
+.mdl-grid{
+  margin: 0px;
+}
+#main {
+  align-items: center;
+  justify-content: center;
+}
