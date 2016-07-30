@@ -1,6 +1,6 @@
 .portfolio-header {
   position: relative;
-  background-image: url(images/header-bg.jpg);
+  background-image: url(images/header-bg.png);
 }
 
 .portfolio-header .mdl-layout__header-row {
@@ -9,7 +9,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
+html{
+  background-color: #efefef;
+}
 .mdl-layout__title {
   font-size: 14px;
   text-align: center;
@@ -21,7 +23,7 @@
 }
 
 .portfolio-logo-row {
-  min-height: 200px;
+  min-height: 100px;
 }
 
 .is-compact .portfolio-logo-row {
@@ -86,15 +88,12 @@
 }
 
 .portfolio-blog-card-full-bg {
-  background: url(images/example-blog03.jpg) center / cover;
 }
 
 .portfolio-blog-card-event-bg {
-  background: url(images/example-blog05.jpg) center / cover;
 }
 
 .portfolio-blog-card-strip-bg {
-  background: url(images/example-blog06.jpg) center / cover;
 }
 
 .portfolio-blog-card-compact .mdl-card__title {
@@ -154,7 +153,14 @@ img.article-image {
 }
 
 .portfolio-contact .mdl-textfield {
+  padding: 4px;
   width: 100%;
+}
+/*.mdl-cell {
+  padding: 4px;
+}*/
+.mdl-mini-footer {
+  padding: 8px;
 }
 
 .portfolio-contact form {
@@ -180,12 +186,8 @@ footer {
 }
 #chartcard,#inputcard{
       width: calc(50% - 16px);
-      margin: 0px;
 }
 
-.mdl-cell {
-  /* margin:0px; */
-}
 #main {
   align-items: center;
   justify-content: center;
@@ -201,4 +203,10 @@ footer {
 
 p {
   margin: 0px;
+}
+.mdl-grid {
+}
+
+#result,#eqn{
+  color: rgb(255,64,129);
 }
