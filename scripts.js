@@ -118,6 +118,9 @@ function LinearInterpolate() {
   } else if (x=="" && y==""){
     alert("Enter a value for the target x or y point.");
     return
+  } else if (x1==x2){
+    alert("Can not interpolate between identical X-values. The result is infinity.");
+    return
   } else if (x!="" && y!=""){
     alert("Only enter a value for the X or Y target value, not both.");
     return

@@ -20,7 +20,7 @@ limitations under the License
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A portfolio template that uses Material Design Lite.">
+  <meta name="description" content="A modern interpolation tool for engineers and mathematicians.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>About NTRP</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -34,7 +34,7 @@ limitations under the License
     <header class="mdl-layout__header portfolio-header">
       <div class="mdl-layout__header-row portfolio-logo-row">
         <span class="mdl-layout__title">
-          <span class="mdl-layout__title"><h1 id="main_title">NTRP</h1></span>
+          <span class="mdl-layout__title"><h1 id="main_title" href="index.html">NTRP</h1></span>
         </span>
       </div>
       <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
@@ -54,16 +54,17 @@ limitations under the License
       <div class="mdl-grid portfolio-max-width">
         <h3>How It Works</h3>
       </div>
-      <div class="mdl-grid portfolio-max-width"><p>The interpolation tool works using linear interpolation. The formula for the computation is:</p></div>
-      <div class="mdl-grid portfolio-max-width" id="eqn"><h6>x=x1+((y-y1)*((x2-x1)/(y2-y1)))</h6></div>
-      <div class="mdl-grid portfolio-max-width"><p>This equation determines the value of x by using the slope between two known points. In this tool, the known points are called Point 1 and Point 2, while the unknown point is referred to as the Target. </p></div>
+      <div class="mdl-grid portfolio-max-width"><p>The interpolation tool works using simple linear interpolation. The formula for the computation is:</p></div>
+      <div class="mdl-grid portfolio-max-width" id="eqn"><h6>x=x<sub>1</sub>+((y-y<sub>1</sub>)*((x<sub>2</sub>-x<sub>1</sub>)/(y<sub>2</sub>-y<sub>1</sub>)))</h6></div>
+      <div class="mdl-grid portfolio-max-width"><p>This equation determines the value of x by using the slope between two known points. In this tool, the known points are called Point 1 and Point 2, while the unknown point is referred to as the Target. The equation determines the value of one coordinate of the unknown point by placing it on the line created by the two known points at the location of the target x or y value.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>When the target point is between the two known points, finding its unknown value is called interpolation. If the target point is located beyond the two known points, this is called extrapolation, and follows the same procedure.</p></div>
       <div class="mdl-grid portfolio-max-width">
         <h3>About This Site</h3>
       </div>
-      <div class="mdl-grid portfolio-max-width"><p>Site design by <a href="www.jaredcstock.com">Jared Stock</a>.</p></div>
-      <div class="mdl-grid portfolio-max-width"><p>This site was created using Google's Material Design Lite library.</p></div>
-      <div class="mdl-grid portfolio-max-width"><p>Charts created by Highcharts. Images from Creative Commons.</p></div>
-      <div class="mdl-grid portfolio-max-width"><p>Love this tool? Consider donating to help keep the lights on.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>Site design by <a href="http://www.jaredcstock.com">Jared Stock</a>.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>This site was created using Google's <a href="https://getmdl.io/">Material Design Lite</a> library. You can find the open-source code for this site on <a href="https://github.com/jstock29/Interpolator">GitHub</a>.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>Charts created by <a href="http://www.highcharts.com/">Highcharts</a>. Images from <a href="https://creativecommons.org/">Creative Commons</a>.</p></div>
+      <!-- <div class="mdl-grid portfolio-max-width"><p>Love this tool? Consider donating to help keep the lights on.</p></div> -->
     </main>
     <footer class="mdl-mini-footer">
       <div class="mdl-mini-footer__left-section">
@@ -71,8 +72,8 @@ limitations under the License
       </div>
       <div class="mdl-mini-footer__right-section">
         <ul class="mdl-mini-footer__link-list">
-          <li><a class="mdl-navigation__link" href="about.html">About</a></li>
-          <li><a class="mdl-navigation__link" href="mailto:jstock529@gmail.com">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mailto:jstock529@gmail.com">Contact</a></li>
         </ul>
       </div>
     </footer>
