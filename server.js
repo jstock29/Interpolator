@@ -1,5 +1,6 @@
 var http = require('http');
 
+var port_number = server.listen(process.env.PORT || 3000);
 // http.createServer(function(request, response) {
 //   response.writeHead(200, {"Content-Type": "text/html"});
 //   response.write("It's alive!");
@@ -8,12 +9,12 @@ var http = require('http');
 
 
 function sendPage(response, filePath, fileContents) {
-  response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))});
+  response.writeHead(200, {"Content-Type" : mime.lookup(path.basename(filePath))});
   response.end(fileContents);
 }
 
 function send404(response) {
-  response.writeHead(404, {"Content-type" : "text/plain"});
+  response.writeHead(404, {"Content-Type" : "text/plain"});
   response.write("Error 404: resource not found");
   response.end();
 }
@@ -46,5 +47,3 @@ var server = http.createServer(function(request, response) {
   var absPath = "./" + filePath;
   serverWorking(response, absPath);
 });
-
-var port_number = server.listen(process.env.PORT || 3000);
