@@ -4,6 +4,7 @@
   "description": "NTRP - Interpolator",
   "main": "scripts.js",
   "dependencies": {
+    "bower": "^1.7.9",
     "highcharts": "^4.2.6"
   },
   "engines": {
@@ -15,7 +16,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "interpolator","NTRP"
+    "interpolator",
+    "NTRP"
   ],
   "author": "Jared Stock",
   "license": "ISC"
