@@ -1,0 +1,22 @@
+{
+  "name": "ntrp",
+  "version": "1.0.0",
+  "description": "NTRP - Interpolator",
+  "main": "scripts.js",
+  "dependencies": {
+    "highcharts": "^4.2.6"
+  },
+  "engines": {
+    "node": "4.4.7",
+    "npm": "2.15.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "interpolator","NTRP"
+  ],
+  "author": "Jared Stock",
+  "license": "ISC"
+}
