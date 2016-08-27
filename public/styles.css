@@ -1,6 +1,6 @@
 .portfolio-header {
   position: relative;
-  background-image: url(images/header-bg.png);
+  background-image: url(images/header-bg.jpg);
 }
 
 .portfolio-header .mdl-layout__header-row {
@@ -23,7 +23,7 @@ html{
 }
 
 .portfolio-logo-row {
-  min-height: 100px;
+  min-height: 44px;
 }
 
 .is-compact .portfolio-logo-row {
@@ -32,7 +32,7 @@ html{
 
 .portfolio-logo {
   background-size: cover;
-  height: 150px;
+  height: 100px;
   width: 150px;
   margin: auto auto 10px;
 }
@@ -207,6 +207,13 @@ p {
 .mdl-grid {
 }
 
+h6{
+  font-weight: 500;
+}
+
 #result,#eqn{
   color: rgb(255,64,129);
 }
+/*.mdl-card {
+  max-height: 440px;
+}*/
