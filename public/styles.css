@@ -186,6 +186,7 @@ footer {
 }
 #chartcard,#inputcard{
       width: calc(50% - 16px);
+      min-width: 350px;
 }
 
 #main {
