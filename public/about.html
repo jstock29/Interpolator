@@ -67,8 +67,12 @@ limitations under the License
       </div>
       <div class="mdl-grid portfolio-max-width"><p>The interpolation tool works using simple linear interpolation. The formula for the computation is:</p></div>
       <div class="mdl-grid portfolio-max-width" id="eqn"><h6>x=x<sub>1</sub>+((y-y<sub>1</sub>)*((x<sub>2</sub>-x<sub>1</sub>)/(y<sub>2</sub>-y<sub>1</sub>)))</h6></div>
-      <div class="mdl-grid portfolio-max-width"><p>This equation determines the value of x by using the slope between two known points. In this tool, the known points are called Point 1 and Point 2, while the unknown point is referred to as the Target. The equation determines the value of one coordinate of the unknown point by placing it on the line created by the two known points at the location of the target x or y value.</p></div>
-      <div class="mdl-grid portfolio-max-width"><p>When the target point is between the two known points, finding its unknown value is called interpolation. If the target point is located beyond the two known points, this is called extrapolation, and follows the same procedure.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>This equation determines the value of x by using the slope between two known points. In this tool, the known points are called Point 1 and Point 2, while the unknown point is simply referred to as the Unknown. The equation determines the value of one coordinate of the unknown point by placing it on the line created by the two known points at the location of the target x or y value.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>When the unknown point is between the two known points, finding its unknown value is called interpolation. If the unknown point is located beyond the two known points, this is called extrapolation, and follows the same procedure.</p></div>
+      <div class="mdl-grid portfolio-max-width"><p>This tool also supports quadratic interpolation using the following equation:</p></div>
+      <div class="mdl-grid portfolio-max-width" id="eqn"><h6>y=(y<sub>1</sub>*(((x-x<sub>2</sub>)*(x-x<sub>3</sub>))/((x<sub>1</sub>-x<sub>2</sub>)*(x<sub>1</sub>-x<sub>3</sub>))))+ (y<sub>2</sub>*(((x-x<sub>1</sub>)*(x-x<sub>3</sub>))/((x<sub>2</sub>-x<sub>1</sub>)*(x<sub>2</sub>-x<sub>3</sub>))))+ (y<sub>3</sub>*(((x-x<sub>1</sub>)*(x-x<sub>2</sub>))/((x<sub>3</sub>-x<sub>1</sub>)*(x<sub>3</sub>-x<sub>2</sub>))))</h6></div>
+      <div class="mdl-grid portfolio-max-width"><p>It should be noted that because this equation only determines the location of a single point, the equation of the true quadratic curve is difficult to represent on the chart shown.</p></div>
+
       <div class="mdl-grid portfolio-max-width">
         <h3>About This Site</h3>
       </div>
