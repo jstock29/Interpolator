@@ -2,13 +2,10 @@
 <!--
 Material Design Lite
 Copyright 2015 Google Inc. All rights reserved.
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
 https://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,19 +26,17 @@ limitations under the License
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
   <script src="scripts.js" type="text/javascript" ></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-
   <!-- Google Analytics -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-81708104-1', 'auto');
   ga('send', 'pageview');
-</script>
+  </script>
 </head>
 
 <body>
@@ -70,144 +65,142 @@ limitations under the License
         <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card mdl-tabs__panel is-active" id="inputcard">
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
             <div class="mdl-tabs__tab-bar">
-                <a href="#linear" class="mdl-tabs__tab is-active">Linear</a>
-                <a href="#quadratic" class="mdl-tabs__tab">Quadratic</a>
+              <a href="#linear" class="mdl-tabs__tab is-active">Linear</a>
+              <a href="#quadratic" class="mdl-tabs__tab">Quadratic</a>
             </div>
-          <div class="mdl-tabs__panel is-active" id="linear">
-          <!-- <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Input</h2>
-          </div> -->
-          <div class="content-grid mdl-grid">
-            <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
-              <p>Known Point 1</p>
+            <div class="mdl-tabs__panel is-active" id="linear">
+              <form id="lin_form">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                    <p>Known Point 1</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x1">
+                    <label class="mdl-textfield__label" for="x1">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y1">
+                    <label class="mdl-textfield__label" for="y1">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                    <p>Known Point 2</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x2">
+                    <label class="mdl-textfield__label" for="x2">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y2">
+                    <label class="mdl-textfield__label" for="y2">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <p>Unknown</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x">
+                    <label class="mdl-textfield__label" for="x">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y">
+                    <label class="mdl-textfield__label" for="y">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="LinearInterpolate()">Calculate</a>
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col"></div>
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="ResetLinear()">Reset</a>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x1">
-              <label class="mdl-textfield__label" for="x1">X Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y1">
-              <label class="mdl-textfield__label" for="y1">Y Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-          </div>
-          <div class="content-grid mdl-grid">
-            <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
-              <p>Known Point 2</p>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x2">
-              <label class="mdl-textfield__label" for="x2">X Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y2">
-              <label class="mdl-textfield__label" for="y2">Y Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-          </div>
-          <div class="content-grid mdl-grid">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <p>Unknown</p>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x">
-              <label class="mdl-textfield__label" for="x">X Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y">
-              <label class="mdl-textfield__label" for="y">Y Value</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-          </div>
-          <div class="content-grid mdl-grid">
-            <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="LinearInterpolate()">Calculate</a>
-            </div>
-            <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col"></div>
-            <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="Reset()">Reset</a>
+            <div class="mdl-tabs__panel" id="quadratic">
+              <form id="quad_form">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                    <p>Known Point 1</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x1q">
+                    <label class="mdl-textfield__label" for="x1q">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y1q">
+                    <label class="mdl-textfield__label" for="y1q">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                    <p>Known Point 2</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x2q">
+                    <label class="mdl-textfield__label" for="x2q">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y2q">
+                    <label class="mdl-textfield__label" for="y2q">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                    <p>Known Point 3</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x3q">
+                    <label class="mdl-textfield__label" for="x3q">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y3q">
+                    <label class="mdl-textfield__label" for="y3q">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <p>Unknown</p>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="xq">
+                    <label class="mdl-textfield__label" for="xq">X Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="yq">
+                    <label class="mdl-textfield__label" for="yq">Y Value</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="QuadraticInterpolate()">Calculate</a>
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col"></div>
+                  <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="ResetQuad()">Reset</a>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="mdl-tabs__panel" id="quadratic">
-        <!-- <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Input</h2>
-        </div> -->
-        <div class="content-grid mdl-grid">
-          <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
-            <p>Known Point 1</p>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x1q">
-            <label class="mdl-textfield__label" for="x1q">X Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y1q">
-            <label class="mdl-textfield__label" for="y1q">Y Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </div>
-        <div class="content-grid mdl-grid">
-          <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
-            <p>Known Point 2</p>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x2q">
-            <label class="mdl-textfield__label" for="x2q">X Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y2q">
-            <label class="mdl-textfield__label" for="y2q">Y Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </div>
-        <div class="content-grid mdl-grid">
-          <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
-            <p>Known Point 3</p>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="x3q">
-            <label class="mdl-textfield__label" for="x3q">X Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="y3q">
-            <label class="mdl-textfield__label" for="y3q">Y Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </div>
-        <div class="content-grid mdl-grid">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <p>Unknown</p>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="xq">
-            <label class="mdl-textfield__label" for="xq">X Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="yq">
-            <label class="mdl-textfield__label" for="yq">Y Value</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </div>
-        <div class="content-grid mdl-grid">
-          <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="QuadraticInterpolate()">Calculate</a>
-          </div>
-          <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col"></div>
-          <div class="mdl-card__actions mdl-card--border mdl-cell mdl-cell--4-col">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" onclick="Reset()">Reset</a>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
         <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" id="chartcard">
           <div class="content-grid mdl-grid">
             <h3 id="result"></h3>

@@ -86,59 +86,24 @@ function GetPointsQuad(x1,y1,x2,y2,x3,y3,x,y){
   chart.redraw()
 }
 
-// function Populate(){
-//   if (document.getElementsByName("type").value== "lin"){
-//     document.getElementById("quad_label").remove();
-//     document.getElementById("quadx").remove();
-//     document.getElementById("quady").remove();
-//   } else if (document.getElementById("type"=="quad").value){
-//
-//     var x = document.createElement("input");
-//     x.type = "text";
-//     x.setAttribute("id", "quadx");
-//     var lx = document.createTextNode("X Value");
-//     x.appendChild(lx);
-//     document.getElementById("quadrow").appendChild(x);
-//
-//     var y = document.createElement("input");
-//     y.type = "text";
-//     y.setAttribute("id", "quady");
-//
-//     var ly = document.createTextNode("X Value");
-//     y.appendChild(ly);
-//     document.getElementById("quadrow").appendChild(y);
-//
-//     var p = document.createElement("P");
-//     p.setAttribute("id", "quad_label");
-//     var l = document.createTextNode("Point 3");
-//     p.appendChild(x);
-//     p.appendChild(y);
-//     document.getElementById("quadrow").appendChild(p);
-//   }
-// }
+function ResetLinear() {
+    document.getElementById("lin_form").reset();
 
-function Reset(){
-  var chart = $('#container').highcharts();
-  document.getElementById("x1").value= ""
-  document.getElementById("y1").value= ""
-  document.getElementById("x2").value= ""
-  document.getElementById("y2").value= ""
-  document.getElementById("x3").value= ""
-  document.getElementById("y3").value= ""
-  document.getElementById("x").value= ""
-  document.getElementById("y").value= ""
-  document.getElementById("x1q").value= ""
-  document.getElementById("y1q").value= ""
-  document.getElementById("x2q").value= ""
-  document.getElementById("y2q").value= ""
-  document.getElementById("x3q").value= ""
-  document.getElementById("y3q").value= ""
-  document.getElementById("xq").value= ""
-  document.getElementById("yq").value= ""
-  document.getElementById("result").innerHTML= ""
-  if (chart.series.length){
-    chart.series[0].remove();
-  }
+    var chart = $('#container').highcharts();
+    if (chart.series.length){
+      document.getElementById("result").innerHTML= ""
+      chart.series[0].remove();
+    }
+}
+
+function ResetQuad() {
+    document.getElementById("quad_form").reset();
+
+    var chart = $('#container').highcharts();
+    if (chart.series.length){
+      document.getElementById("result").innerHTML= ""
+      chart.series[0].remove();
+    }
 }
 
 function LinearInterpolate() {
@@ -164,11 +129,9 @@ function LinearInterpolate() {
     y = parseFloat(y1) + parseFloat((x-x1)*((y2-y1)/(x2-x1)));
     y= y.toFixed(3)
     document.getElementById("result").innerHTML= y
-    // document.getElementById("y").value= y
   } else if (x == ""){
     x=parseFloat(x1)+parseFloat((y-y1)*((x2-x1)/(y2-y1)));
     x=x.toFixed(3)
-    // document.getElementById("x").value= x
     document.getElementById("result").innerHTML= x
   }
   GetPointsLin(x1,y1,x2,y2,x,y)
@@ -196,11 +159,9 @@ function QuadraticInterpolate() {
     y=parseFloat(y1*(((x-x2)*(x-x3))/((x1-x2)*(x1-x3))))+parseFloat(y2*(((x-x1)*(x-x3))/((x2-x1)*(x2-x3))))+parseFloat(y3*(((x-x1)*(x-x2))/((x3-x1)*(x3-x2))));
     y= y.toFixed(3)
     document.getElementById("result").innerHTML= y
-    // document.getElementById("y").value= y
   } else if (x == ""){
     x=parseFloat(x1*(((y-y2)*(y-y3))/((y1-y2)*(y1-y3))))+parseFloat(x2*(((y-y1)*(y-y3))/((y2-y1)*(y2-y3))))+parseFloat(x3*(((y-y1)*(y-y2))/((y3-y1)*(y3-y2))));
     x=x.toFixed(3)
-    // document.getElementById("x").value= x
     document.getElementById("result").innerHTML= x  }
   GetPointsQuad(x1,y1,x2,y2,x3,y3,x,y)
 }
